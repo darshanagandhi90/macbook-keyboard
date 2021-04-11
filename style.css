@@ -8,6 +8,8 @@
 	--white-plain: #fff;
 	--black: #202124;
 	--black-plain: #000;
+	--dark-gold: #9f6e57;
+	--light-gold: #f9d2b8;
 }
 
 html,
@@ -28,12 +30,10 @@ body {
 	height: 598px;
 	display: flex;
 	flex-direction: column;
-    align-items:center;
-    /* gap:10px; */
+	align-items: center;
 	justify-content: center;
 	background-color: var(--gold-color);
 	border-radius: 35px;
-	/* padding: 24px; */
 	margin: 1%;
 }
 .partition {
@@ -80,7 +80,6 @@ body {
 }
 .line-2 {
 	display: flex;
-	/* flex-direction: row; */
 	justify-content: space-around;
 	margin: 0 0.5% 0 0.5%;
 }
@@ -167,7 +166,6 @@ body {
 }
 .command {
 	width: 60px;
-	/* font-size: 0.7em */
 }
 .font-size {
 	font-size: 0.7em;
@@ -184,13 +182,11 @@ body {
 .fn-last {
 	align-self: flex-start;
 }
-.track-pad{
-    margin: 1% 0;
-    width:320px;
-    height: 220px;
-    border:1px solid #9f6e57;
-    border-radius:10px;
-    background-color: #f9d2b8;
-    /* box-shadow: inset 0 2px 2px 0 var(--gold-shadow), inset 2px 0 2px 0 var(--gold-shadow),
-		inset -2px 2px 2px 0 var(--gold-shadow), inset 0 -2px 2px 0 var(--gold-shadow); */
+.track-pad {
+	margin: 1% 0;
+	width: 320px;
+	height: 220px;
+	border: 1px solid var(--dark-gold);
+	border-radius: 10px;
+	background-color: var(--light-gold);
 }
