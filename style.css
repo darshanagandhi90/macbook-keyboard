@@ -12,19 +12,100 @@
 	--light-gold: #f9d2b8;
 }
 
-html,
 body {
-	margin: 0;
-	padding: 0;
-	font-family: 'Varela', sans-serif;
-	background: var(--white);
-	width: 100%;
-	height: 100%;
 	display: flex;
-	align-items: center;
+	min-height: 100vh;
 	justify-content: center;
+	align-items: center;
+	background: #000;
+	background-image: radial-gradient(
+		farthest-corner at 40px 40px,
+		rgb(230, 84, 108) 0%,
+		rgb(56, 110, 190) 100%
+	);
+	perspective: 580px;
+	transition: all ease 0.5s;
 	color: var(--white);
 }
+
+body:hover {
+	perspective: 1500px;
+}
+
+.container-I {
+	width: 854px;
+	height: 598px;
+	position: relative;
+	transition: all 10s;
+	transform: rotateZ(0) rotateX(0) rotateY(0);
+	transform-style: preserve-3d;
+}
+
+.container-I:hover {
+	transform: rotateZ(0) rotateY(310deg) rotateX(90deg);
+}
+.box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: all 0.5s;
+	opacity: 1;
+	display: flex;  
+	align-items: center;
+	justify-content: center;
+}
+
+/* .box:nth-child(1) {
+	background-image: url(1.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transform-origin: center left;
+	transform: rotateY(90deg) translateX(-150px);
+}
+.box:nth-child(2) {
+	background-image: url(Images/2.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transform-origin: center right;
+	transform: rotateY(-90deg) translateX(150px);
+}
+.box:nth-child(3) {
+	background-image: url(Images/3.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transform-origin: center top;
+	transform: rotateX(-90deg) translateY(-150px);
+}
+.box:nth-child(4) {
+	background-image: url(Images/4.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transform-origin: center bottom;
+	transform: rotateX(90deg) translateY(150px);
+}
+.box:nth-child(5) {
+	background-image: url(Images/5.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transform-origin: center bottom;
+	transform: translateZ(-450px);
+}
+.box:nth-child(6) {
+	background-image: url(Images/6.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transform-origin: center bottom;
+	transform: translateZ(150px);
+} */
+
 .container {
 	width: 854px;
 	height: 598px;
@@ -34,8 +115,9 @@ body {
 	justify-content: center;
 	background-color: var(--gold-color);
 	border-radius: 35px;
-	margin: 1%;
+	/* margin: 1%; */
 }
+
 .partition {
 	display: grid;
 	grid-template-rows: repeat(7, auto);
