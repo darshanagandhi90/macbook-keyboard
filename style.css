@@ -23,26 +23,26 @@ body {
 		rgb(230, 84, 108) 0%,
 		rgb(56, 110, 190) 100%
 	);
-	perspective: 580px;
-	transition: all ease 0.5s;
+	/* perspective: 580px;
+	transition: all ease 0.5s; */
 	color: var(--white);
 }
 
 body:hover {
-	perspective: 1500px;
+	/* perspective: 1500px; */
 }
 
 .container-I {
 	width: 854px;
 	height: 598px;
 	position: relative;
-	transition: all 10s;
+	/* transition: all 10s;
 	transform: rotateZ(0) rotateX(0) rotateY(0);
-	transform-style: preserve-3d;
+	transform-style: preserve-3d; */
 }
 
 .container-I:hover {
-	transform: rotateZ(0) rotateY(310deg) rotateX(90deg);
+	/* transform: rotateZ(0) rotateY(310deg) rotateX(90deg); */
 }
 .box {
 	position: absolute;
@@ -50,61 +50,12 @@ body:hover {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	transition: all 0.5s;
+	/* transition: all 0.5s; */
 	opacity: 1;
-	display: flex;  
+	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-
-/* .box:nth-child(1) {
-	background-image: url(1.jpg);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	transform-origin: center left;
-	transform: rotateY(90deg) translateX(-150px);
-}
-.box:nth-child(2) {
-	background-image: url(Images/2.jpg);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	transform-origin: center right;
-	transform: rotateY(-90deg) translateX(150px);
-}
-.box:nth-child(3) {
-	background-image: url(Images/3.jpg);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	transform-origin: center top;
-	transform: rotateX(-90deg) translateY(-150px);
-}
-.box:nth-child(4) {
-	background-image: url(Images/4.jpg);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	transform-origin: center bottom;
-	transform: rotateX(90deg) translateY(150px);
-}
-.box:nth-child(5) {
-	background-image: url(Images/5.jpg);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	transform-origin: center bottom;
-	transform: translateZ(-450px);
-}
-.box:nth-child(6) {
-	background-image: url(Images/6.jpg);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	transform-origin: center bottom;
-	transform: translateZ(150px);
-} */
 
 .container {
 	width: 854px;
@@ -114,7 +65,7 @@ body:hover {
 	align-items: center;
 	justify-content: center;
 	background-color: var(--gold-color);
-	border-radius: 35px;
+	/* border-radius: 35px; */
 	/* margin: 1%; */
 }
 
@@ -271,4 +222,79 @@ body:hover {
 	border: 1px solid var(--dark-gold);
 	border-radius: 10px;
 	background-color: var(--light-gold);
+}
+.cube-wrapper {
+	perspective: 100rem;
+	transition: all ease 0.5s;
+}
+.cube {
+	width: 854px;
+	height: 598px;
+	transform-style: preserve-3d;
+	/* border-radius: 35px; */
+	/* transform: rotateY(-91deg); */
+	transition: all 10s;
+	transform: rotateZ(0) rotateX(0) rotateY(0);
+}
+.cube:hover {
+	transform: rotateZ(0) rotateY(310deg) rotateX(90deg);
+}
+.front-side {
+	transform: translateZ(1rem);
+	position: absolute; /* It will start from origin 0*/
+	transform-style: preserve-3d;
+}
+.back-side {
+	width: 100%;
+	height: 100%;
+	/* border-radius: 35px; */
+	background-color: var(--gold-color);
+	transform: translateZ(-1rem);
+	transform-style: preserve-3d;
+	position: absolute; /* It will start from origin 0*/
+}
+
+.front-side::before,
+.front-side::after {
+	content: '';
+	width: 100%;
+	height: 2rem;
+	position: absolute;
+	background-color: var(--gold-color);
+	/* border-radius: 35px; */
+}
+
+.front-side::before {
+	top: 0;
+	left: 0;
+	transform-origin: top;
+	transform: rotateX(-90deg);
+}
+.front-side::after {
+	bottom: 0;
+	left: 0;
+	transform-origin: bottom;
+	transform: rotateX(90deg);
+}
+.back-side::before,
+.back-side::after {
+	content: '';
+	width: 2rem;
+	height: 100%;
+	position: absolute;
+	background-color: var(--gold-color);
+	/* border-radius: 35px; */
+}
+
+.back-side::before {
+	top: 0;
+	left: 0;
+	transform-origin: left;
+	transform: rotateY(-90deg);
+}
+.back-side::after {
+	top: 0;
+	right: 0;
+	transform-origin: right;
+	transform: rotateY(90deg);
 }
