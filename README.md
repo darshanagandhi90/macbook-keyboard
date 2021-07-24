@@ -10,10 +10,3 @@ Demo:
 
 
 
-
-Todo:
-- [ ] Change font-family
-- [ ] Improve 3D animation
-
-
-
